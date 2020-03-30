@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <TooltipVuer :placement="placement" :content="content" :position="tooltipStyle" @onActionClick="onActionClick"
-      @onClose="onClose"/>
+    <TooltipVuer :placement="placement" :visible="visible" :content="content" 
+      :position="tooltipStyle" @onActionClick="onActionClick" @onClose="onClose"/>
   </div>
 </template>
 
@@ -35,6 +35,7 @@ export default {
           }
         ]
       },
+      visible: true,
       tooltipStyle: {
         top: "200px",
         left: "100px",

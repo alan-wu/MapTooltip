@@ -33,12 +33,10 @@ export default {
       this.$emit("onClose");
     }
   },
-  props: { placement: String, content: Object, position: Object},
+  props: { placement: String, visible: Boolean, content: Object, position: Object},
   data: function() {
     return {
-      manual: true,
-      disabled: false,
-      visible: true
+      disabled: false
     };
   }
 

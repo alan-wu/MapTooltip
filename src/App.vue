@@ -23,6 +23,7 @@ export default {
     return {
       content: {
         title: "Test",
+        placement: "bottom",
         description: "Description", 
         actions: [
           {
@@ -35,7 +36,7 @@ export default {
           }
         ]
       },
-      visible: true,
+      visible: false,
       tooltipStyle: {
         top: "200px",
         left: "100px",

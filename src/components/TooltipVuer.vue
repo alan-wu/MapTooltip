@@ -1,9 +1,10 @@
 <template>
   <div v-bind:style="position">
     <el-popover trigger="manual" width="243" :disabled="disabled" :value="visible"
-      placement="bottom" visible-arrow="true">
+      :placement="placenment" visible-arrow="true">
       <TooltipContent :content="content" @onActionClick="onActionClick"
       @onClose="onClose"/>
+      <div slot="reference"></div>
     </el-popover>
   </div>
 </template>

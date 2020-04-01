@@ -1,7 +1,7 @@
 <template>
   <div v-bind:style="position">
     <el-popover trigger="manual" width="243" :disabled="disabled" :value="visible"
-      :placement="placenment" visible-arrow="true">
+      :placement="placement" visible-arrow="true" ref="popover" :popper-options="options">
       <TooltipContent :content="content" @onActionClick="onActionClick"
       @onClose="onClose"/>
       <div slot="reference"></div>
@@ -34,7 +34,18 @@ export default {
       this.$emit("onClose");
     }
   },
-  props: { placement: String, visible: Boolean, content: Object, position: Object},
+  props: {
+    options: {
+      type: Object,
+      default: function() {
+        return {};
+      } 
+    },
+    placement: String, 
+    visible: Boolean,
+    content: Object,
+    position: Object
+  },
   data: function() {
     return {
       disabled: false

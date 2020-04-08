@@ -4,7 +4,7 @@
     <el-input placeholder="Please input" v-model="top">top</el-input>
     <div class="boundary" ref="boundary">
       <TooltipVuer :placement="placement" :visible="visible" :content="content" 
-        :position="tooltipStyle" :options="options" @onActionClick="onActionClick" 
+        :position="tooltipStyle"  @onActionClick="onActionClick" :options="options"
         @onClose="onClose" ref="popover"/>
     </div>
   </div>

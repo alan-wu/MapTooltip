@@ -1,7 +1,7 @@
 <template>
   <el-container class="container">
     <el-header height="30px" class="header">
-      <div>{{ content.title }}</div>
+      <div class="title">{{ content.title }}</div>
       <i class="el-icon-close icon" @click="onClose"></i>
     </el-header>
     <el-main class="main">
@@ -72,6 +72,11 @@ export default {
 
 .display {
   width: 44px;
+  word-break: normal;
+}
+
+.title {
+  word-break: normal; 
 }
 
 .block {
@@ -79,7 +84,7 @@ export default {
 }
 
 .icon {
-  right: 17px;
+  right: 0px;
   position: absolute;
   top: 10px;
 }

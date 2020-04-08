@@ -1,7 +1,7 @@
 <template>
-  <div v-bind:style="position">
-    <el-popover trigger="manual" width="243" :disabled="disabled" :value="visible"
-      :placement="placement" visible-arrow="true" ref="popover" :popper-options="options">
+  <div v-bind:style="position" ref="container">
+    <el-popover :appendToBody="appendToBody" trigger="manual" width="243" :disabled="disabled" :value="visible"
+      :placement="placement" visible-arrow="true" :popper-options="options">
       <TooltipContent :content="content" @onActionClick="onActionClick"
       @onClose="onClose"/>
       <div slot="reference"></div>
@@ -48,10 +48,10 @@ export default {
   },
   data: function() {
     return {
-      disabled: false
+      disabled: false,
+      appendToBody: false
     };
   }
-
 };
 </script>
 

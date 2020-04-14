@@ -2,7 +2,8 @@
   <el-container class="container">
     <el-header height="30px" class="header">
       <div class="title">{{ content.title }}</div>
-      <i class="el-icon-close icon" @click="onClose"></i>
+      <i v-if="displayCloseButton" class="el-icon-close icon"
+        @click="onClose"></i>
     </el-header>
     <el-main class="main">
       <div class="block">
@@ -44,7 +45,10 @@ export default {
       this.$emit("onClose");
     }
   },
-  props: { content: Object },
+  props: { 
+    content: Object,
+    displayCloseButton: Boolean 
+  },
   data: function() {
     return {
 
@@ -56,6 +60,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.container {
+  text-align:justify;
+}
 
 .header {
   color: #606266;

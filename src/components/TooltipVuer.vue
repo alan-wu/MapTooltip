@@ -3,7 +3,8 @@
     <el-popover :appendToBody="appendToBody" trigger="manual" width="243" :disabled="disabled" :value="visible"
       :placement="placement" visible-arrow="true" :popper-options="options">
       <TooltipContent :content="content" @onActionClick="onActionClick"
-      @onClose="onClose"/>
+        @onClose="onClose" :displayCloseButton="displayCloseButton"
+        ref="content"/>
       <div slot="reference"></div>
     </el-popover>
   </div>
@@ -39,6 +40,12 @@ export default {
       type: Object,
       default: function() {
         return {};
+      } 
+    },
+    displayCloseButton: {
+      type: Boolean,
+      default: function() {
+        return true;
       } 
     },
     placement: String, 

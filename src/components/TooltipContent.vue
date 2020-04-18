@@ -84,11 +84,16 @@ export default {
 }
 
 .title {
-  word-break: normal; 
+  text-align: left;
+  width: 16em;
+  line-height: 1.5em !important;
+  font-weight: 600;
+  font-size: 1em;
+  font-family: Helvetica;
 }
 
 .block {
-  margin-bottom: 13px;
+  margin-bottom: 1.5em;
 }
 
 .icon {
@@ -102,13 +107,25 @@ export default {
 }
 
 .main {
-  font-size: 12px;
-  padding: 10px 17px 0 15px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.5em;
+  margin-top: 1em !important;
+  font-family: Helvetica;
+  font-weight: 400;
+  /* outline: thin red solid; */
+  padding: 1em !important;
 }
 
 .popover-container {
   height: 100%;
   width: 100%;
+}
+
+.main >>> .el-button.is-round{
+  border-radius: 4px;
+  padding: 12px 23px;
+  display: flex;
 }
 
 .button {

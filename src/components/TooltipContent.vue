@@ -1,5 +1,5 @@
 <template>
-  <el-container class="container">
+  <el-container class="tooltip-container">
     <el-header height="30px" class="header">
       <div class="title">{{ content.title }}</div>
       <i v-if="displayCloseButton" class="el-icon-close icon"
@@ -61,7 +61,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.container {
+.tooltip-container {
   text-align:justify;
 }
 
@@ -124,14 +124,15 @@ export default {
 
 .main >>> .el-button.is-round{
   border-radius: 4px;
-  padding: 12px 23px;
+  padding: 9px 20px 10px 20px;
   display: flex;
+  height: 36px;
 }
 
 .button {
   margin-left: 0px !important;
   margin-top: 0px !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
 }
 
 .button+.button {

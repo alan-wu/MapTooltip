@@ -5,7 +5,7 @@
       <i v-if="displayCloseButton" class="el-icon-close icon"
         @click="onClose"></i>
     </el-header>
-    <el-main class="main">
+    <el-main class="maptooltip-main">
       <div class="block">
         <span class="display">{{content.description}}</span>
       </div>
@@ -47,7 +47,7 @@ export default {
   },
   props: { 
     content: Object,
-    displayCloseButton: Boolean 
+    displayCloseButton: Boolean
   },
   data: function() {
     return {
@@ -63,6 +63,13 @@ export default {
 
 .tooltip-container {
   text-align:justify;
+  width: 25em;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  padding: 1m 1em 1em 1em;
+  pointer-events: auto;
+  background: #fff;
+
 }
 
 .header {
@@ -106,7 +113,7 @@ export default {
   cursor: pointer;
 }
 
-.main {
+.maptooltip-main {
   font-size: 14px;
   text-align: left;
   line-height: 1.5em;
@@ -115,6 +122,7 @@ export default {
   font-weight: 400;
   /* outline: thin red solid; */
   padding: 1em !important;
+  max-height:250px;
 }
 
 .popover-container {
@@ -122,7 +130,7 @@ export default {
   width: 100%;
 }
 
-.main >>> .el-button.is-round{
+.maptooltip-main >>> .el-button.is-round{
   border-radius: 4px;
   padding: 9px 20px 10px 20px;
   display: flex;

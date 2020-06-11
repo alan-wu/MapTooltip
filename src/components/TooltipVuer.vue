@@ -1,7 +1,7 @@
 <template>
   <div v-bind:style="position" ref="container">
     <el-popover :appendToBody="appendToBody" trigger="manual" width="243" :disabled="disabled" :value="visible"
-      :placement="placement" visible-arrow="true" :popper-options="options">
+      :placement="placement" visible-arrow="true" :popper-options="options" popper-class="maptooltip-popover">
       <TooltipContent :content="content" @onActionClick="onActionClick"
         @onClose="onClose" :displayCloseButton="displayCloseButton"
         ref="content"/>
@@ -64,6 +64,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-</style>
-
+>>>.maptooltip-popover {
+  width:25em!important;
+  margin:0;
+  padding:0;
+}

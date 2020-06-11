@@ -40,7 +40,7 @@ export default {
       placement: "bottom",
       content: {
         title: "Test",
-        description: "Description", 
+        description: "Description of this. Long Long Long.", 
         actions: [
           {
             title: "View 3D scaffold",
@@ -49,7 +49,23 @@ export default {
           {
             title: "View plot",
             url: "placeholder"
-          }
+          },
+                    {
+            title: "View 3D scaffold",
+            url: "placeholder"
+          },
+          {
+            title: "View plot",
+            url: "placeholder"
+          },
+                    {
+            title: "View 3D scaffold",
+            url: "placeholder"
+          },
+          {
+            title: "View plot",
+            url: "placeholder"
+          },
         ]
       },
       visible: true,

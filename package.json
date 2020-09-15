@@ -1,6 +1,6 @@
 {
   "name": "@abi-software/maptooltip",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "main": "./dist/maptooltip.common.js",
   "files": [
     "dist/*",
